@@ -1,11 +1,15 @@
 .text, .h1, .textarea {
-  color: red;
-  background-color: white;
+  background-color: red;
+  color: white;
   font-size: 20px;
 }
 
 .btn {
   border: 3px solid yellow;
+}
+
+.testClass {
+  content: "HTML5";
 }
 
 /*# sourceMappingURL=style2.css.map */

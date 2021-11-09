@@ -1,17 +1,17 @@
-@mixin solid-yellow{
-border: 3px solid yellow;
+@mixin border($border){
+border: $border;
 }
 @function background($color) {
-  @if($color != white ) {
+  @if($color == white ) {
+    @return  black;
+  }@else{
     @return white;
-  }@else {
-    @return black;
   }
 
 }
 .text{
-  color: red;
-  background-color: background(color);
+  background-color: red;
+  color: background(red);
   font-size: 20px;
 }
 .textarea{
@@ -21,15 +21,24 @@ border: 3px solid yellow;
   @extend .text;
 }
 .btn{
-  @include solid-yellow;
+  @include border(3px solid yellow);
 }
-$langages: HTML5,CSS3,JAVA,React;
+$langages: "HTML5","CSS3","JAVA","React";
+@function first($tab){
+  @return nth($tab,1);
+}
+@function last($tab){
+  @return nth($tab,length($tab));
+}
 @function table($tab){
-  @for $i from 0 through length($tab) {
-    @if($i == 0) {
-      @return $tab[$i];
+  @for $i from 1 through length($tab) {
+    @if($i == 1) {
+      @return nth($tab,$i);
     }@else if($i == length($tab)){
-      @return $tab[$i];
+      @return nth($tab,$i);
     }
   }
+}
+.testClass{
+  content: first($langages);
 }
