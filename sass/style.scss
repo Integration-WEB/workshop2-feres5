@@ -12,6 +12,15 @@ $primary-color: #ff752f;
 body{
   color: $primary-color;
 }
+.btn{
+  background: $primary-color;
+  border-radius: 5px;
+  @if lightness($primary-color)>50%{
+    color: #ffb60b;
+  }@else {
+    color: #ff1f17;
+  }
+}
 
 .button{
   display: inline-block;
