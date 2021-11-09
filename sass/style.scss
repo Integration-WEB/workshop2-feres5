@@ -1,0 +1,42 @@
+@mixin inline-block($marjin : 10px) {
+  display: inline-block;
+  margin-left: $marjin;
+}
+@mixin blue-text {
+  font-family: Arial;
+  font-weight: bold;
+  color: #0000ff;
+}
+
+$primary-color: #ff752f;
+body{
+  color: $primary-color;
+}
+
+.button{
+  display: inline-block;
+  color: $primary-color;
+  text-align: center;
+  border: solid 2px $primary-color;
+}
+.button-alert{
+  a{
+    @extend .button;
+    border-radius: 4px;
+    @include blue-text;
+  }
+}
+
+
+#box{
+  font: {
+    weight: bold;
+    family: Algerian;
+  }
+  @include inline-block()
+}
+@for $i from 1 through 3 {
+  .m-#{$i} {
+    margin: 0 ($i*0.25rem);
+  }
+}
