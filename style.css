@@ -2,6 +2,12 @@ body {
   color: #ff752f;
 }
 
+.btn {
+  background: #ff752f;
+  border-radius: 5px;
+  color: #ffb60b;
+}
+
 .button, .button-alert a {
   display: inline-block;
   color: #ff752f;

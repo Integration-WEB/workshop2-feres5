@@ -1,0 +1,35 @@
+@mixin solid-yellow{
+border: 3px solid yellow;
+}
+@function background($color) {
+  @if($color != white ) {
+    @return white;
+  }@else {
+    @return black;
+  }
+
+}
+.text{
+  color: red;
+  background-color: background(color);
+  font-size: 20px;
+}
+.textarea{
+@extend .text;
+}
+.h1{
+  @extend .text;
+}
+.btn{
+  @include solid-yellow;
+}
+$langages: HTML5,CSS3,JAVA,React;
+@function table($tab){
+  @for $i from 0 through length($tab) {
+    @if($i == 0) {
+      @return $tab[$i];
+    }@else if($i == length($tab)){
+      @return $tab[$i];
+    }
+  }
+}

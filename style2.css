@@ -1,0 +1,11 @@
+.text, .h1, .textarea {
+  color: red;
+  background-color: white;
+  font-size: 20px;
+}
+
+.btn {
+  border: 3px solid yellow;
+}
+
+/*# sourceMappingURL=style2.css.map */
